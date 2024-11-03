@@ -1,0 +1,40 @@
+nav{
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: auto;
+    background: antiquewhite;
+}
+
+ul{
+    display: flex;
+    width: auto;
+    height: 3em;
+    margin: auto;
+    padding: auto;
+    list-style: none;
+}
+
+li{
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+a{
+    color: rgb(29,38,44);
+    padding-top: 30%;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+li:hover,nav li:focus{
+    border-radius: 5px;
+    background-color: rgb(222, 184, 150);
+}
+
+input{
+    color: rgb(29,38,44);
+    margin-top: 10px;
+}

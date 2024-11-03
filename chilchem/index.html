@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>寒光月化--专注于化学竞赛的资源网站</title>
+        <meta charset="zh-CN"/>
+        <meta name="author" content="Kyle Miler"/>
+        <meta name="description" content="寒光月化是最好的化学竞赛资源网站，为你提供免费无水印书籍、试题等，没有下载限制"/>
+        <meta name="keyword" content="化学竞赛资源,化学竞赛,资源,免费,化学竞赛书籍,化学竞赛书目,化学竞赛试题"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link rel="stylesheet" href=""/>
+    </head>
+    <body style="margin: 0;
+    letter-spacing: normal;
+    font: weight 500px;
+    font-family: 'Segoe UI';">
+        <nav>
+            <link rel="stylesheet" href="styles/nav.css"/>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="books.html">书籍</a></li>
+                <li><a href="test-papers.html">试卷</a></li>
+            </ul>
+            <form>
+                <!-- 搜索栏是站点内导航的一个非线性的方式。 -->
+                <input type="search" name="q" placeholder="搜索" />
+                <input type="submit" value="搜索" />
+            </form>
+        </nav>
+        <main>
+            <style>
+            main{
+                display:grid;
+                grid-template-areas:
+                "article aside";
+                grid-template-columns: 2fr 1fr;
+            }
+
+            article{
+                grid-area: article;
+            }
+
+            article>p{
+                margin-left: 100px;
+                margin-top: 0;
+                margin-bottom: 0;
+                height: min-content;
+                font-size: smaller;
+            }
+
+            article>h1{
+                margin-left: 100px;
+                height: min-content;
+                font-size: 40px;
+            }
+            aside{
+                margin: 30px;
+                grid-area: aside;
+                overflow: auto;
+            }
+
+            aside>h1{
+                margin: 0;
+                border-left:2px solid black;
+                padding-left: 20px;
+                height: auto;
+                font-size:40px;
+            }
+
+            aside>h2{
+                margin: 0;
+                border-left:2px solid black;
+                padding-left: 40px;
+                height: auto;
+                font-size: 20px;
+            }
+
+            aside>h2>a{
+                padding: 0;
+            }
+            
+            .intro{
+                width: 100%;
+            }
+
+            .board{
+                color: rgb(29, 38, 44);
+                border-radius: 5px;
+                border: 2px solid antiquewhite;
+                background-color: #f0f8ff;
+                overflow: visible;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 700px;
+                margin: 50px 50px 0 100px;
+
+            }
+
+            .button{
+                background-color: antiquewhite;
+                border-radius: 5px;
+                color: rgb(29, 38, 44);
+                width: 100px;
+                height: 40px;
+                text-align: center;
+                
+            }
+
+            .button:focus{
+                text-decoration: none;
+                border: output;
+            }
+
+
+            </style>
+            <div id="intro" class="intro">
+                <div class="board">
+                    <h2>欢迎选择&支持寒光月化</h2>
+                    <p>您值得信赖的化学竞赛资源网站！</p>
+                    <p>免费、便捷、一体化</p>
+                    <div class="button"><a href="index.html#">开始</a></div>
+                </div>
+            </div>
+            <div id="services" class="services">
+                <div class="service">
+                    <a href="books.html">
+                        <h2>书籍</h2>
+                    </a>
+                </div>
+            </div>
+            <aside>
+                <h1>导航</h1>
+                <h2><a href="index.html#intro">简介</a></h2>
+                <h2><a href="index.html#services">资源</a></h2>
+            </aside>
+        </main>
+        <footer style="background-color: black;
+        color: white;
+        font-weight: 100;
+        font-family:Arial;">
+            <p>© 2050 寒光月化保留所有权利</p>
+        </footer>
+    </body>
+</html>

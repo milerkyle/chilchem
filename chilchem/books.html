@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>寒光月化--专注于化学竞赛的资源网站</title>
+        <meta charset="zh-CN"/>
+        <meta name="author" content="Kyle Miler"/>
+        <meta name="description" content="寒光月化是最好的化学竞赛资源网站，为你提供免费无水印书籍、试题等，没有下载限制"/>
+        <meta name="keyword" content="化学竞赛资源,化学竞赛,资源,免费,化学竞赛书籍,化学竞赛书目,化学竞赛试题"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link rel="stylesheet" href=""/>
+    </head>
+    <body style="margin: 0;
+    letter-spacing: normal;
+    font: weight 500px;
+    font-family: 'Segoe UI';">   
+        <nav>
+            <link rel="stylesheet" href="styles/nav.css"/>        
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="books.html">书籍</a></li>
+                <li><a href="test-papers.html">试卷</a></li>
+            </ul>
+            <search>
+            <form>
+                <!-- 搜索栏是站点内导航的一个非线性的方式。 -->
+                <input type="search" id="searchInput" name="q" placeholder="搜索" />
+                <button type="submit" id="searchSubmit">搜索</button>
+            </form>
+            </search>
+        </nav>
+        <main>
+            <style>
+            main{
+                display:grid;
+                grid-template-areas:
+                "article aside";
+                grid-template-columns: 2fr 1fr;
+            }
+
+            article{
+                grid-area: article;
+            }
+
+            article>p{
+                margin-left: 100px;
+                margin-top: 0;
+                margin-bottom: 0;
+                height: min-content;
+                font-size: smaller;
+            }
+
+            article>h1{
+                margin-left: 100px;
+                height: min-content;
+                font-size: 40px;
+            }
+
+            aside{
+                margin: 30px;
+                grid-area: aside;
+                overflow: auto;
+            }
+
+            aside>h1{
+                margin: 0;
+                border-left:2px solid black;
+                padding-left: 20px;
+                height: auto;
+                font-size:40px;
+            }
+
+            aside>h2{
+                margin: 0;
+                border-left:2px solid black;
+                padding-left: 40px;
+                height: auto;
+                font-size: 20px;
+            }
+
+            aside>h2>a{
+                padding: 0;
+            }
+
+            .book{
+                display: grid;
+                /*grid-template-areas: 
+                ;*/
+                border-radius: 5px;
+                background-color: antiquewhite;
+                margin: 10px 0 10px 100px;
+                padding:10px;
+                min-width: 600px;
+                color: rgb(29,38,44);
+            }
+
+            .book:hover,.book:focus{
+                background-color: rgb(222, 184, 150);
+                border-style: inset;
+            }
+
+            .bookcover{
+                width: 106px;
+                height: 155px;
+                grid-row:1/6;
+                grid-column:1/3;
+                padding-left: 5px;
+                overflow: visible;
+            }
+
+
+            .bookname{
+                font-size: large;
+                font-weight: bold;
+                color: black;
+                height: max-content;
+                grid-row: 1;
+                grid-column:3/13 ;
+            }
+
+            .bookname:hover,.bookname:focus{
+                text-decoration: underline;
+                cursor:pointer;
+            }
+
+            .bookwriter{
+                font-size: small;
+                height: min-content;
+                grid-row: 2;
+                grid-column:3/13 ;
+            }
+
+            .bookdata{
+                font-size: small;
+                height: min-content;
+                grid-row: 3;
+                grid-column: 3/13;
+            }
+
+            .booktype{
+                font-size: small;
+                height: min-content;
+                grid-row:4;
+                grid-column: 3/13;
+            }
+
+            .booksource{
+                font-size: small;
+                height: min-content;
+                grid-row:5;
+                grid-column:3/13;
+            }
+
+            .links{
+                margin: 5px;
+                grid-row: 6;
+                grid-column: 1/13;
+                border-top: 1.5px solid rgb(84, 155, 254);
+                padding-top: 5px;
+            }
+
+            .link{
+                color: white;
+                border-radius: 3px;
+                background-color: rgb(84, 155, 254);
+            }
+
+            link:hover,link:focus{
+                border-radius: 3px;
+                background-color: greenyellow;
+            }
+            </style>
+            <aside>
+                <h1>导航</h1>
+                <h2><a href="books.html#book1">无机化学 第6版</a></h2>
+                <h2><a href="books.html#book2">化学中的多面体</a></h2>
+                <h2><a href="books.html#book3">book3</a></h2>
+            </aside>
+            <article>
+                <h1>书籍</h1> 
+                <p>*“（原）”表示原版本，“（高）”，“（中）”，“（低）”分别代表文件的质量。</p>
+                <p>*“（高）”一般指校正后的扫描件，“（中）”一般指较清晰的扫描件，“（低）”一般指普通的扫描件。</p>
+                <div id="book1" class="book" title="无机化学 第6版Weller,Overton,Rourke,Armstrong无机化学">
+                    <img src="images/books/无机化学 第6版 (Weller,Overton,Rourke,Armstrong) (Z-Library).png" class="bookcover"/>
+                    <div class="bookname"><a href="book1" title="详情">无机化学 第6版</a></div>
+                    <div class="bookwriter">【英】Weller,Overton,Rourke,Armstrong</div>
+                    <div class="bookdata">北京：高等教育出版社,2018.5</div>
+                    <div class="booktype">无机化学</div>
+                    <div class="booksource">来源：</div>
+                    <div class="links">
+                        <span>选项：</span>
+                        <span class="link">（中）
+                            <a href="files/books/无机化学 第6版 (Weller,Overton,Rourke,Armstrong) (Z-Library).pdf" download="files/books/无机化学 第6版 (Weller,Overton,Rourke,Armstrong) (Z-Library).pdf" title="无机化学 第6版 (Weller,Overton,Rourke,Armstrong) (Z-Library).pdf">
+                                PDF,190.5MB
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div id="book2" class="book" title="化学中的多面体周公度无机化学：结构化学">
+                    <img src="images/books/化学中的多面体 (周公度).png" class="bookcover"/>
+                    <div class="bookname"><a href="book2" title="详情">化学中的多面体</a></div>
+                    <div class="bookwriter">周公度</div>
+                    <div class="bookdata">北京：北京大学出版社,2009.6</div>
+                    <div class="booktype">无机化学：结构化学</div>
+                    <div class="booksource">来源：</div>
+                    <div class="links">
+                        <span>选项：</span>
+                        <span class="link">（中）
+                            <a href="files\books\化学中的多面体 (周公度).pdf" download>
+                                PDF,29.5MB
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div id="book3" class="book" title="">
+                    <img src="images/2022证件照.jpg" class="bookcover"/>
+                    <div class="bookname">书名</div>
+                    <div class="bookwriter">作者</div>
+                    <div class="bookdata">出版社，日期</div>
+                    <div class="booktype">类别</div>
+                    <div class="booksource">来源</div>
+                    <div class="links">
+                        <span>下载：</span>
+                        <span><a href="" download="bookname.pdf">PDF,17.3MB</a></span>
+                        <span><a href="" download="bookname.epub">EPUB,9.8MB</a></span>
+                    </div>
+                </div>
+                <div id="book4" class="book" title="">
+                    <img src="images/2022证件照.jpg" class="bookcover"/>
+                    <div class="bookname">书名</div>
+                    <div class="bookwriter">作者</div>
+                    <div class="bookdata">出版社，日期</div>
+                    <div class="booktype">类别</div>
+                    <div class="booksource">来源</div>
+                    <div class="links">
+                        <span>下载：</span>
+                        <span><a href="" download="bookname.pdf">PDF,17.3MB</a></span>
+                        <span><a href="" download="bookname.epub">EPUB,9.8MB</a></span>
+                    </div>
+                </div>
+                <div id="book5" class="book" title="">
+                    <img src="images/2022证件照.jpg" class="bookcover"/>
+                    <div class="bookname">书名</div>
+                    <div class="bookwriter">作者</div>
+                    <div class="bookdata">出版社，日期</div>
+                    <div class="booktype">类别</div>
+                    <div class="booksource">来源</div>
+                    <div class="links">
+                        <span>下载：</span>
+                        <span><a href="" download="bookname.pdf">PDF,17.3MB</a></span>
+                        <span><a href="" download="bookname.epub">EPUB,9.8MB</a></span>
+                    </div>
+                </div>
+            </article>    
+        </main>
+        <footer style="background-color: black;
+        color: white;
+        font-weight: 100;
+        font-family:Arial;">
+            <p>© 2050 寒光月化保留所有权利</p>
+        </footer>
+        <script>
+            function search(){
+                let searchElement=document.getElementById('searchInput')
+                var searchKeyword =searchElement.value.toLowerCase();
+                var links = document.querySelectorAll('.book');
+
+                links.forEach(function(link){
+                    var title = link.getAttribute('title').toLowerCase();
+                    /*var url = link.getAttribute('href').toLowerCase();*/
+                    if (title.includes(searchKeyword) /*|| url.incudes(searchKeyword)*/){
+                    } else {
+                    link.style.display='none';
+                    }
+                });
+            }
+            document.getElementById('searchSubmit').addEventListener('mousedown',search);
+        </script>
+    </body>
+</html>
