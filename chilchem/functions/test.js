@@ -1,8 +1,10 @@
 import book from "../books.html";
 export default{
   async fetch(request,env,ctx){
-    const url = new Url(request.url);
-    if (url.pathname === "/test?q="){
+    const url = new URL(request.url);
+    console.log(url.pathname);
+    console.log(url);
+    if (url.pathname === ""){
       const data = " I am a response!";
       return Response.json(data);
     }
