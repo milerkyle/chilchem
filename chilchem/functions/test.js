@@ -1,5 +1,5 @@
 import html from "../books.html";
-export function onRequest(context){
+export default{
   async fetch(request,env,ctx){
     /**
      * const url = new URL(request.url);
@@ -10,7 +10,7 @@ export function onRequest(context){
       return Response.json(data);
     }
     **/
-    retturn new Response(html,{
+    return new Response(html,{
       status: 200 ,
       headers:{
         "content-type":"text/html",
