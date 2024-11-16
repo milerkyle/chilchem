@@ -1,4 +1,4 @@
-import html from "../books.html";
+import html from "../test-papers.html";
 export default{
   async fetch(request,env,ctx){
     /**
