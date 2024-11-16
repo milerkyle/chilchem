@@ -1,5 +1,5 @@
 import html from "../books.html";
-export default{
+export function onRequest(context){
   async fetch(request,env,ctx){
     /**
      * const url = new URL(request.url);
