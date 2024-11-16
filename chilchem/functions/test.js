@@ -1,4 +1,4 @@
-import book from "../books.html";
+import html from "../books.html";
 export default{
   async fetch(request,env,ctx){
     /**
@@ -10,7 +10,8 @@ export default{
       return Response.json(data);
     }
     **/
-    return new Response(book,{
+    return new Response(html,{
+      status: 200 ,
       headers:{
         "content-type":"text/html",
       },
