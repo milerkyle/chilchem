@@ -1,6 +1,6 @@
 import html from "../books.html";
 export function onRequest(context){
-  async fetch(request,env,ctx){
+  async fetch(request,env,ctx) => {
     /**
      * const url = new URL(request.url);
     console.log(url.pathname);
@@ -10,7 +10,7 @@ export function onRequest(context){
       return Response.json(data);
     }
     **/
-    return new Response(html,{
+    new Response(html,{
       status: 200 ,
       headers:{
         "content-type":"text/html",
