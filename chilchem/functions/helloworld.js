@@ -1,10 +1,9 @@
 import html from "../books.html"
-let page = String(html)
 export function onRequest(context) {
-    return new Response(page,{
-        headers:{
+    return new Response(html,{
+        /**headers:{
             "content-type":"text-html"
-        }
+        }**/
     })
   }
   
