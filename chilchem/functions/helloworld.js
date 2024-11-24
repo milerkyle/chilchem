@@ -1,8 +1,11 @@
 import html from "../books.html"
 export function onRequest(context) {
-    return new Response(html,{
+    let db = context.env.chilchem-db;
+    let stmt = db.prepare("SELECT * FROM books WHERE name=?");
+    let result = await stmt.all();
+    return new Response(result,{
         headers:{
-            "content-type":"text/html;charset = utf-8"
+            "content-type":"text"
         }
     })
   }
