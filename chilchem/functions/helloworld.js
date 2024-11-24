@@ -1,8 +1,8 @@
 import html from "../books.html"
-export function onRequest(context) {
+export  async function onRequest(context) {
     let db = context.env.chilchem-db;
     let stmt = db.prepare("SELECT * FROM books");
-    let result = stmt.all();
+    let result = await stmt.all();
     return new Response(result,{
         headers:{
             "content-type":"text"
