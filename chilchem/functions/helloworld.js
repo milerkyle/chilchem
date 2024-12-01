@@ -1,5 +1,5 @@
 import html from "../books.html"
-export async function onRequest(context) {
+export async function onRequest(context,env,ctx) {
     let result
     try {
         const db = context.env.chilchem;
