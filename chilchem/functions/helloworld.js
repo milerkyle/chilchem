@@ -4,10 +4,9 @@ export async function onRequest(context) {
     try {
         const db = context.env.chilchem;
         const stmt = db.prepare("SELECT * FROM books WHERE name=?").bind("化学中的多面体");
-        let results = await stmt.all();
-        result = string(results)
+        let {result} = await stmt.all();
     } catch(error){
-        result = string(error);
+        result = error;
     }
     
     return new Response(result,{
