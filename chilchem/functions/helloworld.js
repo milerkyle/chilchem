@@ -3,8 +3,9 @@ export async function onRequest(context) {
     let result
     try {
         const db = context.env.chilchem;
-        const stmt = db.prepare("SELECT * FROM books");
-        let {result} = await stmt.all();
+        /*const stmt = db.prepare("SELECT * FROM books");
+        let {result} = await stmt.all();*/
+        result = "hello world?"
     } catch(error){
         result = error;
     }
