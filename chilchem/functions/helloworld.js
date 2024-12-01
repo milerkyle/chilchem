@@ -2,10 +2,9 @@ import html from "../books.html"
 export async function onRequest(context,env,ctx) {
     let result
     try {
-        const db = context.env.chilchem;
-        const stmt = db.prepare("SELECT * FROM books");
+        const stmt =context.env.chilchem.prepare("SELECT * FROM books");
         let {result} = await stmt.all();
-        result = db
+        /*result = db*/
     } catch(error){
         result = error;
     }
