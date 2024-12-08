@@ -3,8 +3,7 @@ export async function onRequest(context) {
     let results
     try {
         const stmt = context.env.DATABASE.prepare("SELECT * FROM books");
-        const {results} = await stmt.all();
-        results = String(results)
+        const {results} = await stmt.all()
     } catch(error){
         results = error;
     }
