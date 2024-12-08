@@ -1,15 +1,15 @@
 import html from "../books.html"
 export async function onRequest(context) {
-    let result
+    let results
     try {
         const stmt = context.env.DATABASE.prepare("SELECT * FROM books");
-        let {result} = await stmt.all();
-        result = String(result)
+        const {results} = await stmt.all();
+        results = String(results)
     } catch(error){
-        result = error;
+        results = error;
     }
     
-    return new Response(result,{
+    return new Response(results,{
         status:200,
     })
   }
