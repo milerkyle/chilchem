@@ -1,9 +1,8 @@
 import html from "../books.html"
-export async function onRequest(context,env,ctx) {
+export async function onRequest(context) {
     let result
     try {
-        const db = context.DATABASE;
-        const stmt = db.prepare("SELECT * FROM books");
+        const stmt = context.env.DATABASE.prepare("SELECT * FROM books");
         let {result} = await stmt.all();
         /*result = db*/
     } catch(error){
