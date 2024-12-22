@@ -6,9 +6,9 @@ export async function onRequest(context) {
         const stmt = context.env.DATABASE.prepare("SELECT * FROM books WHERE name =?").bind("");
         const results = await stmt.raw();
 
-        return Response.json(results);
+        /*return Response.json(results);
 
-        /*return new Response(url,{
+        return new Response(url,{
             status:200,
         })*/
     },
