@@ -1,10 +1,9 @@
 import html from "../test-papers.html";
 export default{
   async fetch(request,env,ctx){
-    
     const url = new URL(request.url);
     const content = url.search;
-    return Response.json(url);
+    return new Response(content);
     /*if (url.pathname === ""){
       const data = " I am a response!";
       return Response.json(data);
