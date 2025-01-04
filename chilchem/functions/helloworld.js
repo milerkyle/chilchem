@@ -11,9 +11,10 @@ export async function onRequest(context) {
         return new Response(results,{
                 status:200,
                 headers:{
-                        /*"Access-Control-Allow-Origin":"*",*/
+                        "content-type":"text",
+                        /*"Access-Control-Allow-Origin":"*",
                         
-                        "X-Content-Type-Options": "no-sniff",
+                        "X-Content-Type-Options": "no-sniff",*/
                 }
         })
 
