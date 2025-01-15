@@ -1,6 +1,7 @@
 import html from "../books.html"
 export function onRequest(context) {
-  return new Response("Hello, world!",{
+  const res = JSON.stringify("Hello,world!");
+  return new Response(res,{
     headers:{
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
