@@ -2,9 +2,9 @@ import html from "../books.html"
 export function onRequest(context) {
   return new Response("Hello, world!",{
     headers:{
-      Access-Control-Allow-Origin: *,
-      Access-Control-Allow-Methods: GET, POST, OPTIONS,
-      Access-Control-Allow-Credentials: true,
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Credentials": "true",
 
     }
   })
