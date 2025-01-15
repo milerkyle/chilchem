@@ -1,6 +1,6 @@
 import html from "../books.html"
-export function onRequest(context) {
-  /*const res = JSON.stringify("Hello,world!");
+/*export function onRequest(context) {
+  const res = JSON.stringify("Hello,world!");
   return new Response(res,{
     headers:{
       "Access-Control-Allow-Origin": "*",
@@ -11,7 +11,7 @@ export function onRequest(context) {
   })
 }
 */
-  export async function onRequest(context) {
+export async function onRequest(context) {
 
         const stmt = context.env.DATABASE.prepare("SELECT * FROM books");
         const results = await stmt.raw();
