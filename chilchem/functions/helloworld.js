@@ -45,12 +45,11 @@ export async function onRequest(context) {
         return new Response(res,{
                 status:200,
                 headers:{
-                        "Content-Type":"application/json",
+                        "Content-Type":"application/json;charset=utf-8",
                         "Access-Control-Allow-Origin":"*",
                         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-                        "Access-Control-Allow-Credentials": "true",                  
+                        /*"Access-Control-Allow-Credentials": "true", */                 
                         "X-Content-Type-Options": "no-sniff",
-                        /*"charset":"Unicode",*/
                 }
         })
 
