@@ -3,6 +3,7 @@ export default{
   async fetch(request,env,ctx){
     const url = new URL(request.url);
     const content = url.search;
+    console.log(content);
     return new Response(content);
     /*if (url.pathname === ""){
       const data = " I am a response!";
