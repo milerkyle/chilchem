@@ -19,14 +19,12 @@ export async function onRequest(context) {
 
         const stmt = context.env.DATABASE.prepare("SELECT * FROM books");
         const results = await stmt.raw();
-        const result = String(results);
         
         const res = JSON.stringify(results);
         console.log(results);
-        console.log(result);
         console.log(res);
 
-        return new Response(res,{
+        return new Response(results,{
                 status:200,
                 headers:{
                         "content-type":"text",
