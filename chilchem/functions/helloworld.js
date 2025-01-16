@@ -40,12 +40,12 @@ export async function onRequest(context) {
                     ]
         
         const res = JSON.stringify(results);
-
+        console.log('I never know the bugggggggg\n',res);
 
         return new Response(res,{
                 status:200,
                 headers:{
-                        "Content-Type":"application/json;charset=utf-8",
+                        "Content-Type":"application/json; charset=utf-8",
                         "Access-Control-Allow-Origin":"*",
                         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
                         /*"Access-Control-Allow-Credentials": "true", */                 
