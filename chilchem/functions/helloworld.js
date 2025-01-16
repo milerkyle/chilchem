@@ -14,7 +14,7 @@ import html from "../books.html"
 export async function onRequest(context) {
   
         const url = new URL(context.request.url);
-        const content = url.search();
+        const content = url.search;
         console.log(content);
 
         const stmt = context.env.DATABASE.prepare("SELECT * FROM books");
