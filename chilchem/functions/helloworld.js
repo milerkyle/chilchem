@@ -22,7 +22,7 @@ export async function onRequest(context) {
         return new Response(result,{
                 status:200,
                 headers:{
-                        "content-type":"text",
+                        "content-type":"text;charset: utf-8 ",
                         "Access-Control-Allow-Origin":"*",
                         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
                         "Access-Control-Allow-Credentials": "true",                  
