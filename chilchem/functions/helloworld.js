@@ -40,7 +40,7 @@ export async function onRequest(context) {
                     ]
         
         const blob = Blob([JSON.stringify(results)],
-                         ,{
+                         {
                            type: "application/json",
                          })
 
