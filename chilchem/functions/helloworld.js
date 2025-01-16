@@ -19,7 +19,7 @@ export async function onRequest(context) {
         
         const res = JSON.stringify(results);
 
-        return new Response(res,{
+        return new Response(results,{
                 status:200,
                 headers:{
                         "content-type":"text",
