@@ -51,7 +51,7 @@ export async function onRequest(context) {
                         "X-Content-Type-Options": "no-sniff",
                 }
         });
-        console.log("I never know the buggggggggg\n",response.body);
+        console.log("I never know the buggggggggg\n",response);
         return response
   }
 
