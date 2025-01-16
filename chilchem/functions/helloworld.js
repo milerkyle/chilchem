@@ -17,7 +17,27 @@ export async function onRequest(context) {
         const content = url.search;
 
         const stmt = context.env.DATABASE.prepare("SELECT * FROM books");
-        const results = await stmt.raw();
+        let results = await stmt.raw();
+        let results = [
+                        [
+                            900485,
+                            "化学中的多面体",
+                            "周公度",
+                            "北京大学出版社",
+                            "2009.6",
+                            null,
+                            0
+                        ],
+                        [
+                            323042,
+                            "基础有机化学：第4版，下册",
+                            "邢其毅等",
+                            "北京大学出版社",
+                            "2017.1",
+                            null,
+                            0
+                        ]
+                    ]
         
         const res = JSON.stringify(results);
 
