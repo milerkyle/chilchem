@@ -16,13 +16,15 @@ export async function onRequest(context) {
         const stmt = context.env.DATABASE.prepare("SELECT * FROM books");
         const results = await stmt.raw();
         const result = String(results);
+        console.log(results);
+        console.log(result);
         
         const res = JSON.stringify(results);
 
         return new Response(result,{
                 status:200,
                 headers:{
-                        "content-type":"text;charset: utf-16 ",
+                        "content-type":"text;charset: Unicode ",
                         "Access-Control-Allow-Origin":"*",
                         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
                         "Access-Control-Allow-Credentials": "true",                  
