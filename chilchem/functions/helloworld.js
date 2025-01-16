@@ -22,10 +22,10 @@ export async function onRequest(context) {
         console.log(result);
         console.log(res);
 
-        return new Response(result,{
+        return new Response(res,{
                 status:200,
                 headers:{
-                        "content-type":"text;charset: zh-CN ",
+                        "content-type":"text",
                         "Access-Control-Allow-Origin":"*",
                         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
                         "Access-Control-Allow-Credentials": "true",                  
