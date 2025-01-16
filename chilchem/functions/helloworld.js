@@ -18,7 +18,7 @@ export async function onRequest(context) {
 
         const stmt = context.env.DATABASE.prepare("SELECT * FROM books");
         let results = await stmt.raw();
-        let results = [
+        results = [
                         [
                             900485,
                             "化学中的多面体",
