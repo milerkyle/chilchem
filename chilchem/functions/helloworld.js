@@ -15,17 +15,14 @@ export async function onRequest(context) {
   
         const url = new URL(context.request.url);
         const content = url.search;
-        console.log(content);
 
         const stmt = context.env.DATABASE.prepare("SELECT * FROM books");
         const results = await stmt.raw();
         
         const res = JSON.stringify(results);
-        console.log(results);
-        console.log(res);
+
 
         return new Response(results,{
-                status:200,
                 headers:{
                         "content-type":"text",
                         "Access-Control-Allow-Origin":"*",
