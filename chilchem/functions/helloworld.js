@@ -39,19 +39,23 @@ export async function onRequest(context) {
                         ]
                     ]
         
-        const res = JSON.stringify(results);
+        const blob = Blob([JSON.stringify(results)],
+                         ,{
+                           type: "application/json",
+                         })
 
-        let response = new Response(res,{
+        let response = new Response(blob,{
                 status:200,
+                statusText:ok,
                 headers:{
                         "Content-Type":"application/json; charset=utf-8",
                         "Access-Control-Allow-Origin":"*",
                         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
                         /*"Access-Control-Allow-Credentials": "true", */                 
-                        "X-Content-Type-Options": "no-sniff",
-                }
+                        "X-Content-Type-Options": "nosniff",
+                },
+                
         });
-        console.log("I never know the buggggggggg\n",response);
         return response
   }
 
