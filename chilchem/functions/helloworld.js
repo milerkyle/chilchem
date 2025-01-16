@@ -40,9 +40,8 @@ export async function onRequest(context) {
                     ]
         
         const res = JSON.stringify(results);
-        console.log('I never know the bugggggggg\n',res);
 
-        return new Response(res,{
+        let response = new Response(res,{
                 status:200,
                 headers:{
                         "Content-Type":"application/json; charset=utf-8",
@@ -51,8 +50,8 @@ export async function onRequest(context) {
                         /*"Access-Control-Allow-Credentials": "true", */                 
                         "X-Content-Type-Options": "no-sniff",
                 }
-        })
-
-    
+        });
+        console.log("I never know the buggggggggg\n",response.body);
+        return response
   }
 
