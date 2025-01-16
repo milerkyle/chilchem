@@ -22,9 +22,9 @@ export async function onRequest(context) {
         const res = JSON.stringify(results);
 
 
-        return new Response(results,{
+        return new Response(res,{
                 headers:{
-                        "content-type":"text",
+                        "Content-Type":"application/json",
                         "Access-Control-Allow-Origin":"*",
                         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
                         "Access-Control-Allow-Credentials": "true",                  
