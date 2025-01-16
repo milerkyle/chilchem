@@ -27,7 +27,7 @@ export async function onRequest(context) {
                         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
                         "Access-Control-Allow-Credentials": "true",                  
                         "X-Content-Type-Options": "no-sniff",
-                        "charset":"utf-16",
+                        "charset":"Unicode",
                 }
         })
 
